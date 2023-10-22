@@ -39,7 +39,9 @@ export class App extends Component {
 
   onAddContact = newUser => {
     const hasDuplicates = this.state.contacts.some(
-      item => item.name === newUser.name && item.number === newUser.number
+      item =>
+        item.name.toLowerCase() === newUser.name.toLowerCase() ||
+        item.number === newUser.number
     );
 
     if (hasDuplicates) {
