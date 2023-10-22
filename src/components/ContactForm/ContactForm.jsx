@@ -46,6 +46,7 @@ export class ContactForm extends Component {
           name="number"
           required
           placeholder="Your number"
+          pattern="^\+?\d{1,4}[ .\-]?\(?\d{1,3}\)?[ .\-]?\d{1,4}[ .\-]?\d{1,4}[ .\-]?\d{1,9}$"
           className={css.inputForm}
           value={this.state.number}
           onChange={this.onChangeInput}
